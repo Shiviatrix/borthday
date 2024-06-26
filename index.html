@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question Page</title>
+	<style>
+		/* CSS to style the page */
+		body {
+			background-color: #000; /* Black background */
+			text-align: center; /* Center the text */
+			color: #fff; /* White text color */
+			font-size: 24px; /* Font size */
+		}
+		.option {
+			cursor: pointer; /* Change cursor to pointer on hover */
+		}
+	</style>
+</head>
+<body>
+	<!-- Initial content -->
+	<div id="initial-content">
+		<p id="initial-text">Just to make sure it is really, you answer a few question plz</p>
+		<p id="click-to-continue">Click anywhere in the page to continue</p>
+	</div>
+
+	<!-- Hidden content that will be displayed after click -->
+	<div id="question-content" style="display: none;">
+		<p id="question-text">What mobile game do you suck at?</p>
+		<p class="option" onclick="selectOption(1)">1. Football</p>
+		<p class="option" onclick="selectOption(2)">2. Tennis</p>
+		<p class="option" onclick="selectOption(3)">3. Golf</p>
+		<p class="option" onclick="selectOption(4)">4. Pool</p>
+	</div>
+
+	<script>
+		// JavaScript code to handle click event and display new content
+		document.body.addEventListener("click", function() {
+			document.getElementById("initial-content").style.display = "none";
+			document.getElementById("question-content").style.display = "block";
+		});
+
+		function selectOption(option) {
+			// You can add code here to handle the selected option
+			console.log("You selected option " + option);
+
+			if (option === 3) {
+				// Redirect to a new page if the user selects "Golf"
+				window.location.href = "https://www.youtube.com/watch?v=UeuZq7PTDjw";
+			}
+		}
+	</script>
+</body>
+</html>
